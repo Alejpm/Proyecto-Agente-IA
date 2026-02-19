@@ -1,0 +1,33 @@
+/* styles.css */
+:root{
+  --bg:#0f172a; --card:#0b1220; --muted:#94a3b8; --accent:#0f766e; --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{background:linear-gradient(180deg,#071024 0%, #07192b 100%); color:#eef2ff; font-family:Inter,system-ui,Segoe UI,Roboto,Arial; margin:0; padding:24px;}
+.container{max-width:1100px; margin:0 auto;}
+header h1{margin:0 0 6px 0; font-size:24px}
+.create, .missions, .mission-detail{background:var(--card); padding:16px; border-radius:12px; margin-top:16px; box-shadow:0 8px 30px rgba(2,6,23,0.6);}
+.create input, .create textarea{width:100%; padding:10px; border-radius:8px; border:0; margin-top:8px; background:var(--glass); color:inherit; resize:vertical}
+.create button{margin-top:10px; background:var(--accent); border:0; padding:10px 14px; border-radius:10px; cursor:pointer; color:#fff}
+.missions .mission-item{padding:10px; border-radius:8px; background:rgba(0,0,0,0.12); margin-bottom:8px; display:flex; justify-content:space-between; align-items:center}
+.missions .mission-item button{background:transparent; border:1px solid rgba(255,255,255,0.06); padding:6px 8px; border-radius:8px; color:inherit; cursor:pointer}
+.controls button{margin-right:8px; padding:8px 10px; border-radius:8px; border:0; cursor:pointer}
+#stepsContainer .step{background:rgba(255,255,255,0.02); padding:10px; border-radius:8px; margin-top:8px}
+.step pre{background:#081226; padding:10px; border-radius:6px; overflow:auto}
+#logs{background:#020617; padding:12px; border-radius:8px; max-height:220px; overflow:auto}
+.progress-bar {
+  width:100%;
+  height:10px;
+  background:#1e293b;
+  border-radius:8px;
+  margin-top:8px;
+  overflow:hidden;
+}
+
+#progressFill {
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#0f766e,#14b8a6);
+  transition:width 0.4s ease;
+}
+
