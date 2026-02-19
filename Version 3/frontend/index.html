@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DevForge — Agente Constructor</title>
+  <link rel="stylesheet" href="./styles.css">
+  <!-- highlight.js for code view -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>DevForge — Agente Constructor</h1>
+      <p>Escribe la misión y pulsa Crear. El agente irá generando pasos, archivos y terminará cuando complete la misión.</p>
+    </header>
+
+    <section class="create">
+      <h2>Nueva Misión</h2>
+      <input id="title" placeholder="Título (ej: API REST en PHP con JWT)" />
+      <textarea id="description" placeholder="Descripción detallada de la misión"></textarea>
+      <button id="createBtn">Crear misión</button>
+    </section>
+
+    <section class="missions">
+      <h2>Misiones</h2>
+      <div id="missionsList">Cargando...</div>
+    </section>
+
+    <section class="mission-detail" id="missionDetail" style="display:none;">
+      <h2 id="mTitle"></h2>
+      <p id="mDesc"></p>
+      <div class="controls">
+        <button id="runStepBtn">Ejecutar siguiente paso</button>
+        <button id="downloadBtn">Descargar proyecto (ZIP)</button>
+        <button id="refreshBtn">Refrescar</button>
+      </div>
+      <div class="progress">
+        <strong>Progreso:</strong> <span id="mStatus"></span> &middot; Paso actual: <span id="mStep"></span>
+      </div>
+      <div class="progress-bar">
+      <div id="progressFill"></div>
+      </div>
+
+      <div id="stepsContainer"></div>
+      <h3>Logs</h3>
+      <pre id="logs"></pre>
+    </section>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
+
